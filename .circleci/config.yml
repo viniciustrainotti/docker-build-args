@@ -18,7 +18,7 @@ workflows:
           create-repo: false
           dockerfile: dockerfile.deploy
           executor: aws-ecr/default
-          extra-build-args: '--build-arg ACCOUNT=AWS_ECR_REGISTRY_ID'
+          extra-build-args: '--build-arg ACCOUNT=${AWS_ECR_REGISTRY_ID}'
           no-output-timeout: 20m
           path: .
           platform: linux/amd64
