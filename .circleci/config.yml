@@ -24,7 +24,7 @@ workflows:
           platform: linux/amd64
           public-registry: false
           push-image: true
-          region: AWS_REGION
+          region: us-east-1
           registry-id: AWS_ECR_REGISTRY_ID
           repo: node-deploy
           tag: 'latest'
