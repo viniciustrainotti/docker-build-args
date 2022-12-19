@@ -18,13 +18,13 @@ workflows:
           create-repo: false
           dockerfile: dockerfile.deploy
           executor: aws-ecr/default
-          extra-build-args: '--build-arg ACCOUNT=AWS_ECR_REGISTRY_ID'
+          extra-build-args: '--build-arg ACCOUNT=${AWS_ECR_REGISTRY_ID}'
           no-output-timeout: 20m
           path: .
           platform: linux/amd64
           public-registry: false
           push-image: true
-          region: AWS_REGION
+          region: ${AWS_REGION}
           registry-id: AWS_ECR_REGISTRY_ID
           repo: node-deploy
           tag: 'latest'
